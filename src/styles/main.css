@@ -13,3 +13,8 @@
   font-family: "BDO Grotesk";
   src: url("/src/resources/fonts/BDOGrotesk-VF.ttf");
 }
+
+@font-face {
+  font-family: "FiraCode";
+  src: url("/src/resources/fonts/FiraCode-VF.ttf");
+}

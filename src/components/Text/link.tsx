@@ -1,12 +1,17 @@
 import { ComponentProps } from "react";
 
-interface LinkProps extends ComponentProps<"p"> {}
+interface LinkProps extends ComponentProps<"div"> {
+  className?: undefined
+}
 
 export const Link = (props: LinkProps) => {
-  const attributes = { ...props};
-  attributes.className +=" font-bdo-grotesk text-link uppercase transition-all hover:font-bold hover:tracking-[0.5rem]"
-
   return (
-    <p {...attributes} />
+    <div {...props} 
+    className="
+      font-bdo-grotesk uppercase
+      text-fxl laptop:text-bsm desktop:text-bxl
+      link
+    "
+    />
   );
 };

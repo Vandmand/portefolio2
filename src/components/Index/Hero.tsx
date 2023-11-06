@@ -1,34 +1,41 @@
 import portraitOne from "@resources/images/portrait1.png";
+import Text from "@components/Text";
+import GlobeIcon from "@resources/images/globe.svg?react";
+import CodeIcon from "@resources/images/code.svg?react";
 
 export const Hero = () => {
   return (
-    <div className="hero min-h-screen flex flex-col items-center justify-center ">
-      <div className="flex flex-col justify-center content-center w-3/5 gap-2">
-        <div className="flex flex-row-reverse text-right text-secondary-400 font-bdo-grotesk text-[2rem] leading-6 uppercase">
-          <p className="font-bold">2017</p>
-          <p className="tracking-[1rem] font-thin">since:</p>
+    <div className="hero h-screen flex flex-col items-center justify-center w-[clamp(260px,80%,1000px)] m-auto gap-2">
+      <div className="flex flex-row items-center gap-2 w-full">
+        <div className="h-full aspect-square">
+          <CodeIcon className="h-full w-full" />
         </div>
-        <div className="aspect-video relative z-10">
-          <p className="text-secondary-400 absolute top-[-0.5ch] left-[-0.2ch] font-treat text-[128px] -z-10">
-            Developer
-          </p>
-          <div className="bg-gradient-to-b from-primary-950 to-primary-400 h-full w-full flex items-end justify-center relative">
-            <img
-              src={portraitOne}
-              alt="portrait"
-              className="mix-blend-hard-light absolute"
-            />
-            <p className="font-treat text-[10rem] mix-blend-color-burn text-[#411122] leading-[10rem]">
-              IM ELLIE
-            </p>
-          </div>
-          <p className="text-secondary-400 absolute bottom-[-0.5ch] right-[-0.2ch] font-treat text-[8rem] -z-10">
-            Designer
+        <div className="flex flex-col">
+          <Text.decoration.Top>Ux/UI Designer</Text.decoration.Top>
+          <Text.decoration.Top>Front end developer</Text.decoration.Top>
+        </div>
+      </div>
+      <div className="relative z-10 h-[clamp(300px,50%,460px)] w-full">
+        <div className="bg-gradient-to-b to-primary from-primary-950 relative h-full flex items-end justify-center">
+          <img
+            src={portraitOne}
+            alt="portrait"
+            className="mix-blend-hard-light absolute h-[90%] object-cover"
+          />
+          <p className="font-treat text-tsm tablet:text-txl laptop:text-[8rem]/[9rem] mix-blend-color-burn text-[#411122]">
+            IM ELLIE
           </p>
         </div>
-        <div className="text-secondary-400 font-bdo-grotesk text-[1.5rem] leading-6">
-          <p className="font-black ">COPENHAGEN, DENMARK</p>
-          <p className="text-[1.5rem]">55.676098, 12.568337</p>
+      </div>
+      <div className="flex flex-row items-center justify-end gap-2 w-full">
+        <div className="flex flex-col items-end">
+          <Text.decoration.Bottom1>Copenhagen, Denmark</Text.decoration.Bottom1>
+          <Text.decoration.Bottom2>
+            55.676098-N 12.568337-E
+          </Text.decoration.Bottom2>
+        </div>
+        <div className="h-full aspect-square">
+          <GlobeIcon className="h-full w-full" />
         </div>
       </div>
     </div>

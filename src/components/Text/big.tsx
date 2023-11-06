@@ -4,9 +4,15 @@ interface BigProps extends ComponentProps<"p"> {}
 
 export const Big = (props: BigProps) => {
 
-  const attributes = {...props}
+  const attributes = {...props, className: undefined}
 
-  attributes.className += " text-[2rem] font-bdo-grotesk text-neutral-text font-bold"
-
-  return <p { ...attributes} />;
+  return (
+    <p { ...attributes} 
+      className="
+        text-fxl tablet:text-bsm tablet-p:text-bxl desktop:text-hsm
+        font-bold
+        font-bdo-grotesk
+      " 
+    />
+  );
 };
