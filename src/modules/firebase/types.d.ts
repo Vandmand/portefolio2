@@ -8,3 +8,12 @@ export interface ProjectInterface {
   name: string;
   link?: string;
 }
+
+export interface BlogInterface {
+  date: Timestamp;
+  tags: string[];
+  description: string;
+  resources: string[];
+  name: string;
+  data: string;
+}

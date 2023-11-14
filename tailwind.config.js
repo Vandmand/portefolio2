@@ -112,7 +112,7 @@ export default {
             "text-decoration": "none"
           },
           ".link:hover": {
-            "letter-spacing": "1rem"
+            "letter-spacing": "0.5rem"
           }
 
         },

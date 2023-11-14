@@ -9,6 +9,12 @@ kanban-plugin: basic
 **Complete**
 - [x] Admin page
 - [x] Admin Panel
+- [x] Footer styles
+
+
+## working
+
+- [ ] Project page
 
 
 ## Tidying
@@ -17,13 +23,13 @@ kanban-plugin: basic
 - [ ] Types.d.ts
 - [ ] Change background for the projects section
 - [ ] Scroll to top on route changes
+- [ ] Make nav title change with routes
 
 
 ## Design
 
-- [ ] Contact page
 - [ ] Blog page
-- [ ] Footer styles
+- [ ] Contact page
 
 
 ## Programming

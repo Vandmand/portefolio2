@@ -11,17 +11,21 @@
             "id": "66a7755e62df60cd",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "kanban",
+              "state": {
+                "file": "Project Kanban.md"
+              }
             }
           },
           {
-            "id": "2a38a31b5817e6d0",
+            "id": "cd77b8c920cfea71",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "Untitled Kanban.md"
+                "file": "Project Overview - Portfolio.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -75,7 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "right": {
@@ -92,6 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Project Kanban.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,6 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Project Kanban.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +135,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Project Kanban.md"
+              }
             }
           },
           {
@@ -161,7 +169,16 @@
   },
   "active": "66a7755e62df60cd",
   "lastOpenFiles": [
-    "Untitled Kanban.md",
+    "Project Overview - Portfolio.md",
+    "Pasted image 20231107103405.png",
+    "Resources/Pasted image 20231107103231.png",
+    "Resources/maininspo.png",
+    "Project Kanban.md",
+    "Resources/Inspiration.png",
+    "Resources/OGExperience.png",
+    "Resources/OGhero.png",
+    "Web Desktop.png",
+    "Resources",
     "Todo.md",
     "Progress tracking.canvas"
   ]

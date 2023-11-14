@@ -3,19 +3,20 @@ import Text from "@components/Text";
 import { TagList } from "../Projects/TagList";
 import { collection, setDoc, doc, Timestamp } from "firebase/firestore";
 import { db } from "@/modules/firebase/config";
+import { ProjectInterface } from "@/modules/firebase/types";
 
 export const AddProject = () => {
-  const [config, setConfig] = useState({
+  const [config, setConfig] = useState<ProjectInterface>({
     name: "",
     description: "",
-    date: new Timestamp(0,0),
-    tags: [] as string[],
+    date: new Timestamp(0, 0),
+    tags: [],
   });
 
   const addProject = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    setDoc(doc(collection(db, 'projects'), config.name), config)
+    setDoc(doc(collection(db, "projects"), config.name), config);
   };
 
   return (
@@ -26,6 +27,7 @@ export const AddProject = () => {
           type="text"
           placeholder="Project Name"
           className="input input-bordered"
+          required={true}
           onChange={(e: ChangeEvent<HTMLInputElement>) => {
             setConfig({ ...config, name: e.target.value });
           }}
@@ -33,13 +35,25 @@ export const AddProject = () => {
         <textarea
           className="textarea textarea-bordered"
           placeholder="Project description"
+          required={true}
           onChange={(e: ChangeEvent<HTMLTextAreaElement>) => {
             setConfig({ ...config, description: e.target.value });
           }}
         />
-        <input type="date" className="input input-bordered" onChange={(e: ChangeEvent<HTMLInputElement>) => {
-          setConfig({ ...config, date: new Timestamp((e.target.valueAsDate?.getTime() ?? 1) / 1000 , 0) });
-        }} />
+        <input
+          type="date"
+          className="input input-bordered"
+          required={true}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => {
+            setConfig({
+              ...config,
+              date: new Timestamp(
+                (e.target.valueAsDate?.getTime() ?? 1) / 1000,
+                0
+              ),
+            });
+          }}
+        />
         <div className="flex flex-col gap-4">
           <Text.Big>Tags</Text.Big>
           <TagList

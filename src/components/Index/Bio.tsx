@@ -1,6 +1,7 @@
 import Decoration3 from "@resources/images/dec3.svg?react";
 import DecorationPlus from "@resources/images/decplus.svg?react";
 import portrait from "@resources/images/portrait2.png";
+import { TextScramble } from "../Animation/textScramble";
 
 export const Bio = () => {
   return (
@@ -23,18 +24,24 @@ export const Bio = () => {
         </div>
         <div className="flex flex-col gap-4 py-8">
           <div className="flex items-center gap-2">
-            <p className="font-firacode text-fxl tablet-p:text-bxl laptop:text-hmd">{"<BIO>"}</p>
+            <p className="font-firacode text-fxl tablet-p:text-bxl laptop:text-hmd flex">
+              {"<"}
+              <TextScramble>BIO</TextScramble>
+              {">"}
+            </p>
             <div className="flex-1 h-0 border-t-2" />
           </div>
           <div className="text-fsm tablet-p:text-bsm laptop:text-bmd flex flex-col gap-4">
-          <p className="font-semibold font-bdo-grotesk">{"Ellie Kulmbak"}</p>
-          <p className="font-thin font-bdo-grotesk">
-            {
-              "General Physics & Mathematics at NEXT HTX Copenhagen - 2019-2023  "
-            }
-          </p>
-          <p className="font-thin font-bdo-grotesk">{"ASU (Academy for Societally Engaged Youth)  - 2020-2021"}</p>
-            </div>
+            <p className="font-semibold font-bdo-grotesk">{"Ellie Kulmbak"}</p>
+            <p className="font-thin font-bdo-grotesk">
+              {
+                "General Physics & Mathematics at NEXT HTX Copenhagen - 2019-2023  "
+              }
+            </p>
+            <p className="font-thin font-bdo-grotesk">
+              {"ASU (Academy for Societally Engaged Youth)  - 2020-2021"}
+            </p>
+          </div>
         </div>
       </div>
     </div>
